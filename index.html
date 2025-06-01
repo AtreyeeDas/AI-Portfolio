@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="profile-header">
+            <img src="images/profile.jpg" alt="Atreyee Das" class="profile-pic" />
+            <h1>Atreyee Das</h1>
+      </div>
+
+      <button id="theme-toggle" aria-label="Toggle Dark Mode">🌓 Toggle Theme</button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Hello, I'm Atreyee 👋</h2>
+      <p>Aspiring AI/ML Engineer | BTech CSE Student</p>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I am passionate about solving problems with AI and data science, with integrated functional interfaces.</p>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul>
+      <li>Generative and Agentic AI</li>
+      <li>Web Development</li>
+      <li>Machine Learning and Deep Learning</li>
+      <li>NLP</li>
+      <li>Remote Sensing Data Analysis</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <h3>🌱 Mangrove Mapper</h3>
+      <p>Few-shot learning and subpixel mapping to track mangrove species change due to cyclones.</p>
+    </div>
+    <div class="project-card">
+      <h3>💊 Smart Drug Repurposer</h3>
+      <p>AI-powered GNN model to identify new uses for existing drugs using biological networks.</p>
+    </div>
+    <div class="project-card">
+      <h3>📈 Stock Vision</h3>
+      <p>Predict stock prices using LSTM and suggest investments via an intelligent assistant.</p>
+    </div>
+    <div class="project-card">
+      <h3>💧 Aqua Insight</h3>
+      <p>Classifies water quality and gives pollution mitigation advice using AI + Gemini API.</p>
+    </div>
+    <div class="project-card">
+      <h3>⚡ SolarCast</h3>
+      <p>Predict renewable energy output using historical weather and satellite imagery.</p>
+    </div>
+    <div class="project-card">
+      <h3>🛒 TN Mart Notifier</h3>
+      <p>Android app estimating Wi-Fi distance to alert offers via WhatsApp at eCommerce zones.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: atreyee.das2023@iem.edu.in</p>
+    <p>LinkedIn: https://www.linkedin.com/in/atreyee-das-5a2137284/</p>
+  </section>
+
+  <!-- Chat Bubble -->
+<div id="chat-bubble">💬 Ask anything about me</div>
+
+<!-- Chat Overlay -->
+<div id="chat-overlay" class="hidden">
+  <div class="chat-header">
+        <img src="images/profile.jpg" alt="Atreyee Das" class="chat-profile-pic" />
+        <span>Ask Me Anything</span>
+    <button id="close-chat">&times;</button>
+  </div>
+  <div id="chat-body" class="chat-body"></div>
+  <div class="chat-input">
+    <input type="text" id="user-input" placeholder="Type your message..." />
+    <button id="send-btn">Send</button>
+  </div>
+</div>
+
+<script src="script.js" type="module">
+    // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCnymssWGeqwwUdD9UxiScBbw0Rb1iFlww",
+    authDomain: "aiwallahportfolio-fb394.firebaseapp.com",
+    projectId: "aiwallahportfolio-fb394",
+    storageBucket: "aiwallahportfolio-fb394.firebasestorage.app",
+    messagingSenderId: "263620470646",
+    appId: "1:263620470646:web:986d7dc19d465c05e87c57",
+    measurementId: "G-8HCGFVH0H4"
+    };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>
